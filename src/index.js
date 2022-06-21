@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: Author
  * @Date: 2022-06-20 10:45:43
- * @LastEditTime: 2022-06-21 09:50:27
+ * @LastEditTime: 2022-06-21 10:43:03
  * @LastEditors: Author
  */
 /**
@@ -10,6 +10,6 @@
  * */
 import {
   Storeage
-} from './libs/index'
+} from './libs'
 
 export default Storeage
