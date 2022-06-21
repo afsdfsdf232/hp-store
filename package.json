@@ -5,10 +5,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/afsdfsdf232/hp-store.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "本地存储 localStorage 技术封装",
   "dependencies": {
     "crypto-js": "^4.1.1"
   }
