@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: Author
  * @Date: 2022-06-20 11:03:13
- * @LastEditTime: 2022-06-21 09:49:49
+ * @LastEditTime: 2022-07-27 16:55:37
  * @LastEditors: Author
  */
 import setStorage from './setStorage'
@@ -39,6 +39,8 @@ class Storeage {
         custom: true //检查是否存在该属性，用来判断获取配置位置
       })
     }
+
+    // 设置 store 数据
     return setStorage(key, data, mergeConfig)
   }
 

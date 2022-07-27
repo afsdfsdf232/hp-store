@@ -2,17 +2,20 @@
  * @Description: 
  * @Author: Author
  * @Date: 2022-06-20 11:02:02
- * @LastEditTime: 2022-06-21 09:49:37
+ * @LastEditTime: 2022-07-27 16:56:38
  * @LastEditors: Author
  */
 import getKeyName from './key'
 import decrypt from './decrypt'
 import removeStorage from './removeStorage'
+import {
+  getItem
+} from './utils'
 
 function getStorage(key, config, prefixHidden) {
   // prefixHidden 是否不添加前缀，默认为 false
   const currentTime = new Date().getTime() //当前时间戳，用于判断是否过期
-  const storeData = window.localStorage.getItem(config.prefix)
+  const storeData = getItem(config.prefix, config.type)
   const global__store = storeData ? JSON.parse(storeData) : null;
   const storeKey = prefixHidden ? key : getKeyName(config, key);
   if (!global__store || !global__store[storeKey]) return null;

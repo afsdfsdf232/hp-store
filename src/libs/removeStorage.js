@@ -2,13 +2,17 @@
  * @Description: 
  * @Author: Author
  * @Date: 2022-06-20 11:02:21
- * @LastEditTime: 2022-06-21 09:50:04
+ * @LastEditTime: 2022-07-27 16:59:27
  * @LastEditors: Author
  */
 import getKeyName from './key'
+import {
+  getItem,
+  setItem
+} from './utils'
 
 function removeStorage(keys, config) {
-  const storeData = window.localStorage.getItem(config.prefix)
+  const storeData = getItem(config.prefix, config.type)
   const global__store = storeData ? JSON.parse(storeData) : null;
   if (!global__store) return true
   // 过滤掉要删除的 key
@@ -28,7 +32,7 @@ function removeStorage(keys, config) {
     }
   }
 
-  window.localStorage.setItem(config.prefix, JSON.stringify(new_global__store))
+  setItem(config.prefix, JSON.stringify(new_global__store), config.type)
 
 }
 

@@ -2,11 +2,11 @@
  * @Description: 
  * @Author: Author
  * @Date: 2022-06-20 11:02:34
- * @LastEditTime: 2022-06-20 16:06:21
+ * @LastEditTime: 2022-07-27 17:00:29
  * @LastEditors: Author
  */
 function clearStorage(config) {
-  window.localStorage.removeItem(config.prefix)
+  window[config.type].removeItem(config.prefix)
 }
 
 export default clearStorage
